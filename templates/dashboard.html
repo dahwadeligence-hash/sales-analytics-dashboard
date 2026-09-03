@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container py-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Sales Dashboard</h1>
+        <div>
+          <a href="/input" class="btn btn-outline-primary">Add Sales</a>
+        </div>
+      </div>
+
+      <div class="row mb-4" id="summary-cards">
+        <!-- summary cards populated by JS -->
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 mb-4">
+          <div class="card p-3">
+            <h5>Total Sales Over Time</h5>
+            <canvas id="timeSeriesChart" height="120"></canvas>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3 mb-3">
+            <h6>Sales by Product</h6>
+            <canvas id="byProductChart" height="200"></canvas>
+          </div>
+
+          <div class="card p-3">
+            <h6>Top Reps</h6>
+            <canvas id="topRepsChart" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="card p-3">
+            <h5>Recent Records</h5>
+            <div id="recentTable" class="table-responsive mt-3"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/dashboard.js"></script>
+  </body>
+</html>

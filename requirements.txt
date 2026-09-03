@@ -1,0 +1,4 @@
+Flask
+
+# Optional pinned versions
+# Flask==2.3.2

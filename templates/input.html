@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Input</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Sales Input</h1>
+        <div>
+          <a href="/dashboard" class="btn btn-primary">View Dashboard</a>
+        </div>
+      </div>
+
+      <form method="post" class="card p-4">
+        <div class="row g-3">
+          <div class="col-md-3">
+            <label class="form-label">Date</label>
+            <input type="date" name="date" class="form-control">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Product</label>
+            <input type="text" name="product" class="form-control" required>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Quantity</label>
+            <input type="number" name="quantity" class="form-control" value="1" min="1">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Unit price</label>
+            <input type="number" step="0.01" name="unit_price" class="form-control" value="0.00">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Sales rep</label>
+            <input type="text" name="sales_rep" class="form-control">
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Region</label>
+            <input type="text" name="region" class="form-control">
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Notes</label>
+            <textarea name="notes" class="form-control" rows="2"></textarea>
+          </div>
+
+          <div class="col-12 text-end">
+            <button type="submit" class="btn btn-success">Save record</button>
+          </div>
+        </div>
+      </form>
+
+      <hr class="my-5">
+
+      <h3>Quick actions</h3>
+      <p>Use the dashboard to visualize data and verify seed rows.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
